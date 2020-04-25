@@ -1,0 +1,6 @@
+	VAR_OCTAL	= $d	; unused
+	VAR_DECIMAL	= $7b	; unused
+	VAR_HEX	= $1f	; unused
+	Start	= $900	; unused
+	VAR_BINARY	= $55	; unused
+	SCREEN_Start_Location	= $400
