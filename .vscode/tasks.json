@@ -74,6 +74,31 @@
                     "message": 1
                 }
             }
+        },
+        {
+            "label": "CL64 -> C64Debugger",
+            "type": "shell",
+            "linux": {                  
+                "command": "cl65 -o ${fileBasenameNoExtension}.prg -u __EXEHDR__ -t c64 -C /usr/share/cc65/cfg/c64-asm.cfg ${file} && c64debugger ${fileBasenameNoExtension}.prg"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "clear": true
+            },
+            "problemMatcher": {
+                "owner": "acme",
+                "fileLocation": ["relative", "${workspaceFolder}"],
+                "pattern": {
+                    "regexp": "^(Error - File\\s+(.*), line (\\d+) (\\(Zone .*\\))?:\\s+(.*))$",
+                    "file": 2,
+                    "location": 3,
+                    "message": 1
+                }
+            }
         }
+
     ]
 }
