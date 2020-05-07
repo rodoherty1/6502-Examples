@@ -11,6 +11,8 @@
 ;* Variables
 ;*************************************************
 
+; *=$0801
+
 SCREEN_Start_Location = $0400
 
 VAR_BINARY = %01010101
@@ -20,13 +22,10 @@ VAR_DECIMAL = 123
 
 Start:
     ldy #0
+
 @Looper:
     tya
     sta SCREEN_Start_Location,y
     iny
     bne @Looper
     rts
-
-
-
-
