@@ -2,7 +2,7 @@
     "c64.assemblerPath": "/usr/bin/acme",
     "c64.c64Debugger": "~/tools/C64Debugger/c64debugger",
     "files.exclude": {
-        "acme/*": true,
-        "original/*": true
+        "acme/*": true
+        // "original/*": true
     }
 }
