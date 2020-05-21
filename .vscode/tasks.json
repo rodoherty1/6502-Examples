@@ -81,23 +81,11 @@
             "linux": {                  
                 "command": "cl65 -o ${fileBasenameNoExtension}.prg -u __EXEHDR__ -t c64 -C c64-asm.cfg ${file} && c64debugger ${fileBasenameNoExtension}.prg"
             },
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
+            "group": "build",
             "presentation": {
                 "clear": true
             },
-            "problemMatcher": {
-                "owner": "acme",
-                "fileLocation": ["relative", "${workspaceFolder}"],
-                "pattern": {
-                    "regexp": "^(Error - File\\s+(.*), line (\\d+) (\\(Zone .*\\))?:\\s+(.*))$",
-                    "file": 2,
-                    "location": 3,
-                    "message": 1
-                }
-            }
+            "problemMatcher": ["$ca65", "$ld65", "$ld65-config", "$ld65-unresolved"]
         }
 
     ]
